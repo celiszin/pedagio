@@ -22,13 +22,13 @@ const Total = (parse) => {
     Veiculo = [Moto, Carro, Caminhão]
     Total = [0.5(Moto), 0.10(Carro), 0.15(Caminhão)]
 
-    if (veiculo() === "Carro") {
+    if (Veiculo === "Carro") {
         Total = Veiculo * 0.10
-        if (Veiculo() == "Moto") {
+        if (Veiculo == "Moto") {
             Total = Veiculo * 0.05
         } else
         {
-            (Veiculo() === "Caminhão")
+            (Veiculo === "Caminhão")
             Total = Veiculo * 0.15
         }
     }
