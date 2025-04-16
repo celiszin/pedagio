@@ -17,15 +17,20 @@ import { Text } from "react-native";
 const Total = (parse) => {
     const Distância = parse.Distância
     const Veiculo = parse.Veiculo
-    const Kilometragem = parse.Kilometragem
     Total = Distância + Veiculo / 0.05;
 
     Veiculo = [Moto, Carro, Caminhão]
     Total = [0.5(Moto), 0.10(Carro), 0.15(Caminhão)]
 
-    if (Distância && Veiculo < Kilometragem) {
-        const Total = Veiculo * Kilometragem
-        return(<Text>{Total}</Text>);
+    if (veiculo() === "carro") {
+        Total = Veiculo * 0.10
+        if (Veiculo() == "moto") {
+            Total = Veiculo * 0.05
+        } else
+        {
+            (Veiculo() === "caminhão")
+            Total = Veiculo * 0.15
+        }
     }
 
 }
